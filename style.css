@@ -5,6 +5,7 @@ body {
   margin: 2em;
   background-color: #000000;
   color: #ffffff;
+  text-align: center;
 }
 
 button {
@@ -12,4 +13,16 @@ button {
   margin: 2em;
   background-color: #ffffff;
   color: #000000;
+  border-color: #aaaaaa;
+  border-width: 3px;
+}
+
+.ppbuttonlol {
+  font-family: helvetica, arial, sans-serif;
+  margin: 2em;
+  background-color: #ffffff;
+  color: #000000;
+  border-color: #aaaaaa;
+  border-width: 3px;
+  width: 500px;
 }
