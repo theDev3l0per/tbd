@@ -1,7 +1,6 @@
 /* CSS files add styling rules to your content */
 
 body {
-  font-family: helvetica, arial, sans-serif;
   margin: 0em;
   background-color: #000000;
   color: #ffffff;
@@ -9,14 +8,13 @@ body {
 }
 
 button {
-  font-family: helvetica, arial, sans-serif;
   margin: 0em;
   background-color: #ffffff;
   color: #000000;
   border-color: #aaaaaa;
   border-width: 3px;
-  width: 12.5vw;
-  height: 25vh;
+  width: 20vw;
+  height: 10vh;
 }
 
 #ppbuttonlol, #npbl {
