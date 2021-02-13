@@ -3,3 +3,7 @@
 
 // prints "hi" in the browser's dev tools console
 console.log("hi");
+function isEncodedExpantaNum(thing) {
+  return thing.hasOwnProperty("sign") && thing.hasOwnProperty("array") && thing.hasOwnProperty("layer")
+}
+function 
