@@ -10,9 +10,9 @@ body {
 button {
   margin: 0em;
   background-color: #ffffff;
-  color: #000000;
-  border-color: #aaaaaa;
-  border-width: 3px;
+  color: #417895;
+  border-color: #755775;
+  border-width: 5px;
   width: 20vw;
   height: 11.5vh;
 }
@@ -22,8 +22,14 @@ button {
   height: 7.5vh;
   border-width: 5px;
   background-color: #caf174;
+  border-color: #aaaaaa;
+  color: #000000;
 }
 
 #tabs {
-  width: 100vw;
+  width: 100%;
+}
+
+.tab {
+  width: 33%;
 }
