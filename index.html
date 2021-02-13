@@ -17,11 +17,16 @@
       Description: TBD <br><br>
       The next feature unlocks at _____<br><br>
       <button id="ppbuttonlol">
-        You have {{points.toFixed(4)}} points.<br>You are getting some points every second.
+        You have {{points.toFixed(4)}} points.<br>You are getting 0.01 points every second.
       </button><br>
+      <button id="notppbuttonlol" style="background-color: #aaaaaa;height:4vh;width:12.5vw">
+        Click this button for 0 points.
+      </button><br> <!-- this is a joke button lol -->
       <button>
         Multiply gain by 1.1<br>
-        Cost: getCost(11).toString()  (temporary, because it breaks game)
+        Cost: 0.01<br>
+        Effect: Point Gain *1.1<br>
+        Amount: 0
       </button>
     </div>
     <script src="https://unpkg.com/vue@next"></script>

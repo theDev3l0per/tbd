@@ -19,7 +19,7 @@ button {
   height: 25vh;
 }
 
-#ppbuttonlol {
+#ppbuttonlol, #notppbuttonlol {
   width: 100vw;
   height: 7.5vh;
   border-width: 5px;
