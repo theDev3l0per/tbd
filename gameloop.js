@@ -29,6 +29,9 @@ function getEffect(x) {
   let upgradeEffects = {
     11() {
       return D.pow(1.1, game.rebuyables[11])
+    },
+    12() {
+      return D.pow(2, game.rebuyables[12])
     }
   }
   return upgradeEffects[x]()
