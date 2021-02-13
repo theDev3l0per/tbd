@@ -18,11 +18,7 @@ button {
 }
 
 .ppbuttonlol {
-  font-family: helvetica, arial, sans-serif;
-  margin: 2em;
-  background-color: #ffffff;
-  color: #000000;
-  border-color: #aaaaaa;
-  border-width: 3px;
   width: 500px;
+  border-width: 10px;
+  background-color: #ffaaaa;
 }

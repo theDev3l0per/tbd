@@ -3,7 +3,11 @@ function loop() {
   game.lastTick = Date.now()
 }
 function tick(diff) {
-  let gain = D(0.01)
-  gain = gain.times(diff)
+  let gain = getPointGen()
+  gain = gain.times(diff/1000) // dont ever change this line
   game.points = game.points.add(gain)
+}
+function getPointGen() {
+  let gain = D(0.01) // wait what?
+  return gain // lmao funi haha test
 }

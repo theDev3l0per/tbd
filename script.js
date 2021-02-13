@@ -1,5 +1,5 @@
 const D = ExpantaNum // allows D(x) and D.function(inputs)
-let game /*= bruh gaming moment*/
+let game = {}/*= bruh gaming moment*/
 
 function isEncodedExpantaNum(thing) {
   return thing.hasOwnProperty("sign") && thing.hasOwnProperty("array") && thing.hasOwnProperty("layer")
@@ -23,7 +23,7 @@ function decodeObject(thing) {
 }
 
 function save() {
-  localStorage.thonkeres = JSON.stringify(game)
+  localStorage.thonkeres = JSON.stringify(game.$data)
 }
 
 function load() {
@@ -49,4 +49,5 @@ var app = Vue.createApp({
 window.onload = () => {
   load()
   setInterval(loop,20)
+  setInterval(save,10000)
 }
