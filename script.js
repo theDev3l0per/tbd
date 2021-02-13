@@ -27,8 +27,8 @@ function save() {
 }
 
 function load() {
-  if(localStorage.thonkeres) game = Object.assign(game,decodeObject(JSON.parse(localStorage.thonkeres)))
   game = app.mount("#app")
+  if(localStorage.thonkeres) game = Object.assign(game,decodeObject(JSON.parse(localStorage.thonkeres)))
 } 
 
 // perfect....?
