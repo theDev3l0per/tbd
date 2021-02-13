@@ -11,3 +11,27 @@ function getPointGen() {
   let gain = D(0.01) // wait what?
   return gain // lmao funi haha test
 }
+
+function getCost(x) {
+  let upgradeCosts = {
+    11() {
+      return D.pow(5, game.rebuyables[11]).mul(0.01)
+    },
+    12() {
+      
+    }
+  }
+  return upgradeCosts[x]()
+} 
+
+function getEffect(x) {
+  let ungradeEffects = {
+    
+  }
+  return upgradeCosts[x]()
+}
+//  an object with functions
+// just use the [key] trick
+// show
+
+

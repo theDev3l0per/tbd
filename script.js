@@ -40,6 +40,9 @@ var app = Vue.createApp({
   data() {
     return {
       points: D(0),
+      rebuyables: {
+        11: D(0)
+      },
       lastTick: Date.now()
     } // ynot but ww HUH? thonkeres thonkeres  
   }
