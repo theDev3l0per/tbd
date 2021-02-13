@@ -3,9 +3,13 @@
 body {
   font-family: helvetica, arial, sans-serif;
   margin: 2em;
+  background-color: #000000;
+  color: #ffffff;
 }
 
-h1 {
-  font-style: italic;
-  color: #373fff;
+button {
+  font-family: helvetica, arial, sans-serif;
+  margin: 2em;
+  background-color: #ffffff;
+  color: #000000;
 }
