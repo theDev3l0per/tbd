@@ -14,7 +14,7 @@ button {
   border-color: #aaaaaa;
   border-width: 3px;
   width: 20vw;
-  height: 10vh;
+  height: 11.5vh;
 }
 
 #ppbuttonlol, #npbl {
@@ -22,4 +22,8 @@ button {
   height: 7.5vh;
   border-width: 5px;
   background-color: #caf174;
+}
+
+#tabs {
+  width: 100vw;
 }
