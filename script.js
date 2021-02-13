@@ -45,6 +45,9 @@ var app = Vue.createApp({
       },
       lastTick: Date.now()
     } // ynot but ww HUH? thonkeres thonkeres  
+  },
+  methods: {
+    
   }
 })
 

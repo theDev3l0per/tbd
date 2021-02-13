@@ -14,9 +14,14 @@
     <div id="app">
       
       <h1>Name: TBD</h1>
-      Description: TBD <br><br>
+      Description: TBD <br>
+      The next feature unlocks at _____<br><br>
       <button id="ppbuttonlol">
-        You have {{points.toFixed(4)}} points ({{format(getPointGen())}}/s).
+        You have {{points.toFixed(4)}} points.<br>You are getting getPointGen().toFixed(4) points every second.
+      </button>
+      <button>
+        Multiply gain by 1.1<br>
+        Cost: {{getCost(11).toString()}}
       </button>
     </div>
     <script src="https://unpkg.com/vue@next"></script>

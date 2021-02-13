@@ -9,6 +9,7 @@ function tick(diff) {
 }
 function getPointGen() {
   let gain = D(0.01) // wait what?
+  gain = gain.times(getEffect(11))
   return gain // lmao funi haha test
 }
 
@@ -25,10 +26,12 @@ function getCost(x) {
 } 
 
 function getEffect(x) {
-  let ungradeEffects = {
-    
+  let upgradeEffects = {
+    11() {
+      return D.pow(1.1, game.rebuyables[11])
+    }
   }
-  return upgradeCosts[x]()
+  return upgradeEffects[x]()
 }
 //  an object with functions
 // just use the [key] trick
