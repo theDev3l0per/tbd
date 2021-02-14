@@ -44,22 +44,18 @@ var app = Vue.createApp({
         11: D(0)
       },
       lastTick: Date.now(),
-      tab: 0,
-    } // ynot but ww HUH? thonkeres thonkeres  
-  },
+      tab: '0', // ok so its '0'
+    } /* ynot but ww HUH? thonkeres thonkeres */ },
   methods: {
     getPointGen() {
-      let data = this
-      return getPointGen(data)
+      return getPointGen(this)
     },
     getEffect(x) {
-      let data = this
-      return getEffect(x, data)
-    }
-  }
-})
-
-
+      return getEffect(x, this)
+    },
+    getCost(x) {
+      return getCost(x, this)
+    }}})
 window.onload = () => {
   load()
   setInterval(loop,20)

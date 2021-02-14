@@ -19,24 +19,30 @@
       Description: TBD <br><br>
       The next feature unlocks at _____<br><br>
       <div id="tabs">
-        <button style="tab;height:4vh;" @onclick="player.tab=='0'">Main</button>
-        <button style="tab;height:4vh;" @onclick="player.tab=='1">Acronyms</button>
+        <button style="tab;height:4vh;" onclick="game.tab='0'">Main</button>
+        <button style="tab;height:4vh;" onclick="game.tab='1'">Acronyms</button>
       </div>
-      <button id="ppbuttonlol">
+      <div v-if="tab=='0'">
+        <button id="ppbuttonlol">
         You have {{points.toFixed(3)}} points.<br>You are getting {{getPointGen().toFixed(3)}} points every second.
       </button><br>
-      <button>
-        <h1>Upgrade 1</h1><br>
-        Cost: 0.01<br>
-        EPP: Point Gain *1.1<br> <!-- EPP = EFFECT PER PURCHASE -->
-        TE: Point Gain *{{getEffect(11).toFixed()}}<br> <!-- TE = TOTAL EFFECT -->
-        Amount: {{rebuyables[11].toFixed()}} <!-- is the button fixed  -->
+      <button onclick="">
+        <h1>Upgrade 1</h1>
+        Cost: {{getCost(11).toFixed(3)}}<br>
+        EPP: Point Gain *1.1<br>
+        TE: Point Gain *{{getEffect(11).toFixed(3)}}<br>
+        Amount: {{rebuyables[11].toFixed(3)}}
       </button>
+      </div>
+      <div v-if="tab=='1'">
+        <h1>Upgrade Acronyms</h1>
+        EPP: Effect Per Purchase<br>TE: Total Effect
+      </div>
     </div>
     <script src="https://unpkg.com/vue@next"></script>
     <script src="/exp.js"></script>
+    <script src="/up.js"></script>
     <script src="/gameloop.js"></script>
     <script src="/script.js"></script>
-    
   </body>
 </html>
