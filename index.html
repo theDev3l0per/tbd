@@ -27,30 +27,30 @@
         You have {{points.toFixed(3)}} points.<br>You are getting {{getPointGen().toFixed(3)}} points every second.
       </button><br>
       <button onclick="buy(11)">
-        <h1>Upgrade 1</h1>
+        <h1>R1</h1>
         Cost: {{getCost(11).toFixed(3)}}<br>
         EPP: Point Gain *1.1 or more<br> <!-- -->
         TE: Point Gain *{{getEffect(11).toFixed(3)}}<br>
         Amount: {{rebuyables[11].toFixed(3)}}
       </button>
       <button onclick="buy(12)">
-        <h1>Upgrade 2</h1>
+        <h1>R2</h1>
         Cost: {{getCost(12).toFixed(3)}}<br>
-        EPP: Upgrade 1 Cost /4<br>
-        TE: Upgrade 1 Cost /{{getEffect(12).toFixed(3)}}<br>
+        EPP: R1 Cost /4<br>
+        TE: R1 Cost /{{getEffect(12).toFixed(3)}}<br>
         Amount: {{rebuyables[12].toFixed(3)}}
       </button>
       <button onclick="buy(13)">
-        <h1>Upgrade 3</h1>
+        <h1>R3</h1>
         Cost: {{getCost(13).toFixed(3)}}<br>
-        EPP: Upgrade 2 Cost /8<br>Upgrade 1 EPP *1.1<br>
-        TE: Upgrade 2 Cost /{{getEffect(13)[0].toFixed(3)}}<br>Upgrade 1 EPP *{{getEffect(13)[1].toFixed(3)}}<br>
+        EPP: R2 Cost /8<br>R1 EPP *1.1<br>
+        TE: R2 Cost /{{getEffect(13)[0].toFixed(3)}}<br>R1 EPP *{{getEffect(13)[1].toFixed(3)}}<br>
         Amount: {{rebuyables[13].toFixed(3)}}
       </button>
       </div>
       <div v-if="tab=='1'">
-        <h1>Upgrade Acronyms</h1>
-        EPP: Effect Per Purchase<br>TE: Total Effect
+        <h1>[Button] Acronyms</h1>
+        R: Rebuyable<br>EPP: Effect Per Purchase<br>TE: Total Effect
       </div>
     </div>
     <script src="https://unpkg.com/vue@next"></script>
