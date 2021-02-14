@@ -7,9 +7,9 @@ function tick(diff) {
   gain = gain.times(diff/1000) // dont ever change this line
   game.points = game.points.add(gain)
 }
-function getPointGen() {
+function getPointGen(data = game) {
   let gain = D(0.01) // wait what?
-  gain = gain.times(getEffect(11))
+  gain = gain.times(getEffect(11, data))
   return gain // lmao funi haha test
 }
 
@@ -25,13 +25,13 @@ function getCost(x) {
   return upgradeCosts[x]()
 } 
 
-function getEffect(x) {
+function getEffect(x, data = game) {
   let upgradeEffects = {
     11() {
-      return D.pow(1.1, game.rebuyables[11])
+      return D.pow(1.1, data.rebuyables[11])
     },
     12() {
-      return D.pow(2, game.rebuyables[12])
+      return D.pow(2, data.rebuyables[12])
     }
   }
   return upgradeEffects[x]()

@@ -14,10 +14,10 @@ button {
   border-color: #755775;
   border-width: 5px;
   width: 20vw;
-  height: 11.5vh;
+  height: 25vh;
 }
 
-#ppbuttonlol, #npbl {
+#ppbuttonlol {
   width: 100vw;
   height: 7.5vh;
   border-width: 5px;

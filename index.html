@@ -19,20 +19,18 @@
       Description: TBD <br><br>
       The next feature unlocks at _____<br><br>
       <div id="tabs">
-        <button style="tab;height:4vh;">xD</button>
+        <button style="tab;height:4vh;" @onclick="player.tab=='0'">Main</button>
+        <button style="tab;height:4vh;" @onclick="player.tab=='1">Acronyms</button>
       </div>
       <button id="ppbuttonlol">
-        You have {{points.toFixed(3)}} points.<br>You are getting 0.01 points every second.
+        You have {{points.toFixed(3)}} points.<br>You are getting {{getPointGen().toFixed(3)}} points every second.
       </button><br>
-      <button id="npbl" style="background-color: #aaaaaa;height:4vh;width:20vw">
-        Click this button for 0 points.
-      </button><br> <!-- this is a joke button lol -->
       <button>
-        Multiply gain by 1.1<br>
+        <h1>Upgrade 1</h1><br>
         Cost: 0.01<br>
-        EPB: Point Gain *1.1<br>
-        TE: Point Gain *1.0<br>
-        Amount: 0
+        EPP: Point Gain *1.1<br> <!-- EPP = EFFECT PER PURCHASE -->
+        TE: Point Gain *{{getEffect(11).toFixed()}}<br> <!-- TE = TOTAL EFFECT -->
+        Amount: {{rebuyables[11].toFixed()}} <!-- is the button fixed  -->
       </button>
     </div>
     <script src="https://unpkg.com/vue@next"></script>

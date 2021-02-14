@@ -43,11 +43,19 @@ var app = Vue.createApp({
       rebuyables: {
         11: D(0)
       },
-      lastTick: Date.now()
+      lastTick: Date.now(),
+      tab: 0,
     } // ynot but ww HUH? thonkeres thonkeres  
   },
   methods: {
-    
+    getPointGen() {
+      let data = this
+      return getPointGen(data)
+    },
+    getEffect(x) {
+      let data = this
+      return getEffect(x, data)
+    }
   }
 })
 
