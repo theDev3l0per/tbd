@@ -7,6 +7,7 @@
 * hardcapped at ee6
 
 # Prestige #
-* prestige currency [nonsense formula: for every ee0.1 past ee6, you get double the prestige currency tha]
-* rebuyable that raises softcap by +ee0.1
+* prestige currency [nonsense formula: for every ee0.1 past ee6, you get double the prestige currency than before, base gain is 1]
+* * example lol: ee5: 1, ee6: 2, ee6.1: 4, ee6.2: 8, etc
+* rebuyable that raises softcap by +ee0.1 [cost scaling: x5]
 * UPGRADE (not repeatable) that lowers cost scaling of R1-3 by /1.2
