@@ -29,23 +29,22 @@
       <button onclick="buy(11)">
         <h1>Upgrade 1</h1>
         Cost: {{getCost(11).toFixed(3)}}<br>
-        EPP: Point Gain *1.1<br>
+        EPP: Point Gain {{getEffect(11, data).toString()}}<br> <!-- -->
         TE: Point Gain *{{getEffect(11).toFixed(3)}}<br>
         Amount: {{rebuyables[11].toFixed(3)}}
       </button>
       <button onclick="buy(12)">
         <h1>Upgrade 2</h1>
         Cost: {{getCost(12).toFixed(3)}}<br>
-        EPP: Upgrade 1 Cost /2<br>
+        EPP: Upgrade 1 Cost /4<br>
         TE: Upgrade 1 Cost /{{getEffect(12).toFixed(3)}}<br>
         Amount: {{rebuyables[12].toFixed(3)}}
       </button>
       <button onclick="buy(13)">
         <h1>Upgrade 3</h1>
         Cost: {{getCost(13).toFixed(3)}}<br>
-        EPP: Upgrade 1 Cost /2, Upgrade 1 EPP *1.03<br>
-        TE1: Upgrade 1 Cost /{{getEffect(13)[0].toFixed(3)}}<br>
-        TE2: Upgrade 1 EPP *{{getEffect(13)[1].toFixed(3)}}<br>
+        EPP: Upgrade 2 Cost /8<br>Upgrade 1 EPP *1.1<br>
+        TE: Upgrade 2 Cost /{{getEffect(13)[0].toFixed(3)}}<br>Upgrade 1 EPP *{{getEffect(13)[1].toFixed(3)}}<br>
         Amount: {{rebuyables[13].toFixed(3)}}
       </button>
       </div>

@@ -7,7 +7,7 @@ function getCost(x, data = game) {
       return D.pow(10, data.rebuyables[12]).mul(0.1).div(getEffect(13, data)[0]) // lmao pog an array for effects
     },
     13() {
-      return D.pow(20, data.rebuyables[13]).mul(0.25)
+      return D.pow(20, data.rebuyables[13]).mul(0.025)
     }
   }
   return upgradeCosts[x]()
@@ -19,10 +19,10 @@ function getEffect(x, data = game) {
       return D.pow(D(1.1).times(getEffect(13, data)[1]), data.rebuyables[11])
     },
     12() {
-      return D.pow(2, data.rebuyables[12])
+      return D.pow(4, data.rebuyables[12])
     },
     13() {
-      return {0:D.pow(2, data.rebuyables[13]), 1:D.pow(1.03, data.rebuyables[13])}
+      return {0:D.pow(8, data.rebuyables[13]), 1:D.pow(1.1, data.rebuyables[13])}
     }
   }
   return upgradeEffects[x]()
