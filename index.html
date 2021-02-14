@@ -19,8 +19,8 @@
       Description: TBD <br><br>
       The next feature unlocks at _____<br><br>
       <div id="tabs">
-        <button style="tab;height:4vh;" onclick="game.tab='0'">Main</button>
-        <button style="tab;height:4vh;" onclick="game.tab='1'">Acronyms</button>
+        <button style="tab;height:4vh;color:#777777;background-color:#dddddd;" onclick="game.tab='0'">Main</button>
+        <button style="tab;height:4vh;color:#777777;background-color:#dddddd;" onclick="game.tab='1'">Acronyms</button>
       </div>
       <div v-if="tab=='0'">
         <button id="ppbuttonlol">
@@ -32,6 +32,13 @@
         EPP: Point Gain *1.1<br>
         TE: Point Gain *{{getEffect(11).toFixed(3)}}<br>
         Amount: {{rebuyables[11].toFixed(3)}}
+      </button>
+      <button onclick="buy(12)">
+        <h1>Upgrade 2</h1>
+        Cost: {{getCost(12).toFixed(3)}}<br>
+        EPP: Left Upgrade Cost /2<br>
+        TE: Point Gain *{{getEffect(12).toFixed(3)}}<br>
+        Amount: {{rebuyables[12].toFixed(3)}}
       </button>
       </div>
       <div v-if="tab=='1'">

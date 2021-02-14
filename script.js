@@ -41,7 +41,9 @@ var app = Vue.createApp({
     return {
       points: D(0),
       rebuyables: {
-        11: D(0)
+        11: D(0),
+        12: D(0),
+        13: D(0)
       },
       lastTick: Date.now(),
       tab: '0', // ok so its '0'
