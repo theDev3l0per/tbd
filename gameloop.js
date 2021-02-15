@@ -6,6 +6,7 @@ function tick(diff) {
   let gain = getPointGen()
   gain = gain.times(diff/1000) // dont ever change this line
   game.points = game.points.add(gain)
+  runAutomation()
 }
 function getPointGen(data = game) {
   let gain = D(0.01) // wait what?
