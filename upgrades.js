@@ -8,6 +8,9 @@ function getCost(x, data = game) {
     },
     13() {
       return D.pow(20, data.rebuyables[13]).mul(0.025)
+    },
+    auto1() {
+      return D("ee5").pow(D.pow(10, data.rebuyables["auto1"]))
     }
   }
   return upgradeCosts[x]()
@@ -23,6 +26,9 @@ function getEffect(x, data = game) {
     },
     13() {
       return {0:D.pow(8, data.rebuyables[13]), 1:D.pow(1.1, data.rebuyables[13])}
+    },
+    auto1() {
+      return data.rebuyables["auto1"].lt(1) ? D(0) : data.rebuyables["auto1"] 
     }
   }
   return upgradeEffects[x]()

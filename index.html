@@ -46,11 +46,18 @@
         EPP: R2 Cost /8<br>R1 EPP *1.1<br>
         TE: R2 Cost /{{getEffect(13)[0].toFixed(3)}}<br>R1 EPP *{{getEffect(13)[1].toFixed(3)}}<br>
         Amount: {{rebuyables[13].toFixed(3)}}
+      </button><br><br>
+      <button onclick="buy('auto1')">
+        <h1>Automation Upgrade 1</h1>
+        Cost: {{getCost('auto1').toFixed(3)}}<br>
+        EPP: *2 UPT
+        TE: {{getEffect('auto1')}} UPT
+        Amount: {{rebuyables[13].toFixed(3)}}
       </button>
       </div>
       <div v-if="tab=='1'">
         <h1>[Button] Acronyms</h1>
-        R: Rebuyable<br>EPP: Effect Per Purchase<br>TE: Total Effect
+        R: Rebuyable<br>EPP: Effect Per Purchase<br>TE: Total Effect<br><br>UPT: Upgrades Per Tick
       </div>
     </div>
     <script src="https://unpkg.com/vue@next"></script>

@@ -43,7 +43,8 @@ var app = Vue.createApp({
       rebuyables: {
         11: D(0),
         12: D(0),
-        13: D(0)
+        13: D(0),
+        auto1: D(0)
       },
       lastTick: Date.now(),
       tab: '0', // ok so its '0'
