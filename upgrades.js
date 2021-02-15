@@ -34,13 +34,12 @@ function getEffect(x, data = game) {
   return upgradeEffects[x]()
 } // wow we have a separate thing now gflghjflkhfglhjfglhkjfgl thonkeres thonkeres
 
-function buy(x, y) {
+function buy(x, y = D(1)) {
   let buyFuncs = {
     11(y) {
-      if (game.points.gte(getCost(11))) {
-        // game.points = game.points.sub(getCost(11)) // does this work????? thonkeres thonkeres
-        game.rebuyables[11] = game.rebuyables[11].add(1)
-      }
+      let max = D.logBase(player.points.div(D(0.01).div(getEffect(12))), 5)
+      maxBought = max.sub(player.rebuyables[11])
+      game.rebuyables[11]
     },
     12(y) {
       if (game.points.gte(getCost(12))) {

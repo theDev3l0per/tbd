@@ -55,6 +55,9 @@ var app = Vue.createApp({
         13: D(0),
         auto1: D(0)
       },
+      unlocks: {
+        
+      },
       lastTick: Date.now(),
       tab: '0', // ok so its '0'
     } /* ynot but ww HUH? thonkeres thonkeres */ },

@@ -52,7 +52,7 @@
         <h1>Automation Upgrade 1</h1>
         Cost: {{getCost('auto1').toFixed(3)}}<br>
         EPP: *2 UPT<br>
-        TE: {{getEffect('auto1')}} UPT<br>
+        TE: *{{getEffect('auto1').toString()}} UPT<br>
         Amount: {{rebuyables[13].toFixed(3)}}
       </button>
       </div>
@@ -62,7 +62,7 @@
       </div>
       <div v-if="tab=='2'">
         <h1>Settings</h1>
-        <button @click="hardReset()" style="height:4vh;">oh no reset</button>
+        <button onclick="hardReset()" style="height:4vh;">oh no reset</button>
       </div>
     </div>
     <script src="https://unpkg.com/vue@next"></script>
