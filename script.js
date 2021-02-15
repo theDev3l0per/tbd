@@ -31,6 +31,15 @@ function load() {
   if(localStorage.thonkeres) game = Object.assign(game,decodeObject(JSON.parse(localStorage.thonkeres)))
 } 
 
+function hardReset(){
+  let x = window.confirm("Are you sure you want to reset your game?")
+  if(x){
+    localStorage.clear();
+    player = {};
+    location.reload();
+  }else window.confirm("You have not reset your game.")
+}
+
 // perfect....?
 
 // ex, in code to acces points its player.points not app.player, just player, we can switch to game if you want

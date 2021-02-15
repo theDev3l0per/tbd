@@ -1,6 +1,6 @@
 // pog
-function runAutomation() {
-  buy(11)
-  buy(12)
-  buy(13)
+function runAutomation(x) {
+  buy(11, x)
+  buy(12, x)
+  buy(13, x)
 }

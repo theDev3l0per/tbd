@@ -21,6 +21,7 @@
       <div id="tabs">
         <button style="tab;height:4vh;color:#777777;background-color:#dddddd;" onclick="game.tab='0'">Main</button>
         <button style="tab;height:4vh;color:#777777;background-color:#dddddd;" onclick="game.tab='1'">Acronyms</button>
+        <button style="tab;height:4vh;color:#777777;background-color:#dddddd;" onclick="game.tab='2'">Settings</button>
       </div>
       <div v-if="tab=='0'">
         <button id="ppbuttonlol">
@@ -58,6 +59,10 @@
       <div v-if="tab=='1'">
         <h1>[Button] Acronyms</h1>
         R: Rebuyable<br>EPP: Effect Per Purchase<br>TE: Total Effect<br><br>UPT: Upgrades Per Tick
+      </div>
+      <div v-if="tab=='2'">
+        <h1>Settings</h1>
+        <button @click="hardReset()">oh no reset</button>
       </div>
     </div>
     <script src="https://unpkg.com/vue@next"></script>
