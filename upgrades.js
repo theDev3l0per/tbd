@@ -37,21 +37,19 @@ function getEffect(x, data = game) {
 function buy(x, y = D(1)) {
   let buyFuncs = {
     11(y) {
-      let max = D.logBase(player.points.div(D(0.01).div(getEffect(12))), 5)
-      maxBought = max.sub(player.rebuyables[11])
-      game.rebuyables[11]
+      let max = D.logBase(game.points.div(D(0.01).div(getEffect(12))), 5).ceil()
+      maxBought = max.sub(game.rebuyables[11])
+      game.rebuyables[11] = game.rebuyables[11].add(D.min(y, maxBought))
     },
     12(y) {
-      if (game.points.gte(getCost(12))) {
-        // game.points = game.points.sub(getCost(11)) // does this work????? thonkeres thonkeres
-        game.rebuyables[12] = game.rebuyables[12].add(1)
-      }
+      let max = D.logBase(game.points.div(D(0.1).div(getEffect(13)[0])), 10).ceil()
+      maxBought = max.sub(game.rebuyables[12])
+      game.rebuyables[12] = game.rebuyables[12].add(D.min(y, maxBought))
     },
     13(y) {
-      if (game.points.gte(getCost(13))) {
-        // game.points = game.points.sub(getCost(11)) // does this work????? thonkeres thonkeres
-        game.rebuyables[13] = game.rebuyables[13].add(1)
-      }
+      let max = D.logBase(game.points.div(D(0.025)), 20).ceil()
+      maxBought = max.sub(game.rebuyables[13])
+      game.rebuyables[13] = game.rebuyables[13].add(D.min(y, maxBought))
     },
     auto1() {
       if (game.points.gte(getCost("auto1"))) {
