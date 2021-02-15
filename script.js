@@ -55,9 +55,6 @@ var app = Vue.createApp({
         13: D(0),
         auto1: D(0)
       },
-      unlocks: {
-        automation: false,
-      },
       lastTick: Date.now(),
       tab: '0', // ok so its '0'
     } /* ynot but ww HUH? thonkeres thonkeres */ },
@@ -71,6 +68,7 @@ var app = Vue.createApp({
     getCost(x) {
       return getCost(x, this)
     }}})
+
 window.onload = () => {
   load()
   setInterval(loop,20)

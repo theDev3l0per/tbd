@@ -17,7 +17,8 @@
       
       <h1>Name: TBD</h1>
       Description: TBD <br><br>
-      The next feature unlocks at ee5<br><br>
+      <div v-if="points.lt('ee5')">The next wave of content unlocks at ee5<br><br></div>
+      <div v-if="points.gte('ee5')">There are no future waves of content... for now.</div>
       <div id="tabs">
         <button style="tab;height:4vh;color:#777777;background-color:#dddddd;border-color:#ac402b;" onclick="game.tab='0'">Main</button>
         <button style="tab;height:4vh;color:#ff0f00;background-color:#47aa55;border-color:#aaaaaa;" onclick="game.tab='1'">Acronyms</button>
@@ -48,7 +49,7 @@
         TE: R2 Cost /{{getEffect(13)[0].toFixed(3)}}<br>R1 EPP *{{getEffect(13)[1].toFixed(3)}}<br>
         Amount: {{rebuyables[13].toFixed(3)}}
       </button><br><br>
-      <button onclick="buy('auto1')">
+      <button v-if="points.gte('ee5')" onclick="buy('auto1')">
         <h1>Automation Upgrade 1</h1>
         Cost: {{getCost('auto1').toFixed(3)}}<br>
         EPP: *4 UPT<br>
@@ -57,8 +58,9 @@
       </button>
       </div>
       <div v-if="tab=='1'">
-        <h1>[Button] Acronyms</h1>
-        R: Rebuyable<br>EPP: Effect Per Purchase<br>TE: Total Effect<br><br>UPT: Upgrades Per Tick
+        <h1>Beginning</h1>
+        R: Rebuyable<br>EPP: Effect Per Purchase<br>TE: Total Effect<br><br>
+        <div v-if="points.gte('ee5')"><h1>Automation</h1>UPT: Upgrades Per Tick</div>
       </div>
       <div v-if="tab=='2'">
         <h1>Settings</h1>
