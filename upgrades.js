@@ -28,7 +28,7 @@ function getEffect(x, data = game) {
       return {0:D.pow(8, data.rebuyables[13]), 1:D.pow(1.1, data.rebuyables[13])}
     },
     auto1() {
-      return data.rebuyables["auto1"].lt(1) ? D(0) : D.pow(2, data.rebuyables["auto1"].sub(1))
+      return data.rebuyables["auto1"].lt(1) ? D(0) : D.pow(4, data.rebuyables["auto1"].sub(1))
     }
   }
   return upgradeEffects[x]()
