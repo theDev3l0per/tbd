@@ -19,9 +19,9 @@
       Description: TBD <br><br>
       The next feature unlocks at ee5<br><br>
       <div id="tabs">
-        <button style="tab;height:4vh;color:#777777;background-color:#dddddd;" onclick="game.tab='0'">Main</button>
-        <button style="tab;height:4vh;color:#777777;background-color:#dddddd;" onclick="game.tab='1'">Acronyms</button>
-        <button style="tab;height:4vh;color:#777777;background-color:#dddddd;" onclick="game.tab='2'">Settings</button>
+        <button style="tab;height:4vh;color:#777777;background-color:#dddddd;border-color:#ac402b;" onclick="game.tab='0'">Main</button>
+        <button style="tab;height:4vh;color:#ff0f00;background-color:#47aa55;border-color:#aaaaaa;" onclick="game.tab='1'">Acronyms</button>
+        <button style="tab;height:4vh;color:#3af7fa;background-color:#9a52ca;border-color:#d02b58;" onclick="game.tab='2'">Settings</button>
       </div>
       <div v-if="tab=='0'">
         <button id="ppbuttonlol">
@@ -30,7 +30,7 @@
       <button onclick="buy(11)">
         <h1>R1</h1>
         Cost: {{getCost(11).toFixed(3)}}<br>
-        EPP: Point Gain *1.1 or more<br> <!-- -->
+        EPP: Point Gain *1.1 or more<br> <!-- how to kgfdkgjdfkgjfdkgjdfkgljdfkgldjfglkfdjklgdjg -->
         TE: Point Gain *{{getEffect(11).toFixed(3)}}<br>
         Amount: {{rebuyables[11].toFixed(3)}}
       </button>
@@ -51,8 +51,8 @@
       <button onclick="buy('auto1')">
         <h1>Automation Upgrade 1</h1>
         Cost: {{getCost('auto1').toFixed(3)}}<br>
-        EPP: *2 UPT
-        TE: {{getEffect('auto1')}} UPT
+        EPP: *2 UPT<br>
+        TE: {{getEffect('auto1')}} UPT<br>
         Amount: {{rebuyables[13].toFixed(3)}}
       </button>
       </div>
@@ -62,7 +62,7 @@
       </div>
       <div v-if="tab=='2'">
         <h1>Settings</h1>
-        <button @click="hardReset()">oh no reset</button>
+        <button @click="hardReset()" style="height:4vh;">oh no reset</button>
       </div>
     </div>
     <script src="https://unpkg.com/vue@next"></script>

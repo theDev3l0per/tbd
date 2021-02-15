@@ -6,7 +6,7 @@ function tick(diff) {
   let gain = getPointGen()
   gain = gain.times(diff/1000) // dont ever change this line
   game.points = game.points.add(gain)
-  if game.arunAutomation()
+  if (game.rebuyables.auto1.gt(0))runAutomation(getEffect("auto1"))
 }
 function getPointGen(data = game) {
   let gain = D(0.01) // wait what?
